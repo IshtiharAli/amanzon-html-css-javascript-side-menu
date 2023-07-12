@@ -32,10 +32,10 @@ li {
     color: white;
 }
 
-.nav .container-nav ul li:hover {
+.nav .container-nav ul li:hover { 
     border: 1px solid white;
     padding: 4px 2px;
-    transition:none;
+    transition: none;
 }
 
 .sidebar-container-navigation {
@@ -220,8 +220,10 @@ li {
 
 .sidebar-items .submenu {
     display: none;
-    padding-left: 20px;
+    /* padding-left: 20px; */
     border-top: 1.5px solid #ccc;
+    margin-top: 15px;
+
 }
 
 .sidebar-items .down i {
@@ -233,7 +235,7 @@ li {
     color: black;
     font-size: 14px;
     transition: none;
-   
+
 }
 
 .sidebar-items .down.open i {
@@ -247,6 +249,7 @@ li {
 .sidebar-items .submenu li p {
     display: flex;
     align-items: center;
+    font-size: 16px;
 }
 
 .sidebar-items .submenu li p i {
@@ -262,57 +265,42 @@ li {
     background-color: #ccc;
   } */
 
-.sidebar-items .see-less {
-    display:block;
-    color: black;
 
+
+/* see All and see less items sub menu */
+
+.sidebar-items .down.open {
+    display: none;
+}
+
+.sidebar-items .down.open+.submenu {
+    display: block;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
 }
 
 .sidebar-items .see-less.open {
     display: flex;
     align-items: center;
-    padding: 10px;
-    cursor: pointer;
-   
-
+    /* padding: 15px; */
 }
 
-/* .sidebar-items .see-less.open:hover {
-    background-color: #ccc;
-  }
-  
-  .sidebar-items .see-less.open:hover i {
-    transform: rotate(-180deg);
-  } */
+.sidebar-items .see-less a {
+    font-size: 16px;
+}
 
-.sidebar-items .see-less.open .see-less-button {
+
+
+.sidebar-items .down.open .fa-chevron-right {
+    transform: rotate(-90deg);
+}
+
+
+
+.sidebar-items .see-less.open .see-less-button i {
     margin-left: 10px;
-   
+    transform: rotate(180deg);
 }
 
-
-
-
-
-/* ======================================= */
-
-/* .sidebar-items .down i {
-    position: absolute;
-    top: 50%;
-    right: 15px;
-    transform: translateY(-50%) rotate(0deg);
-    transition: transform 0.3s ease;
-}
-
-.sidebar-items .down.open i {
-    transform: translateY(-50%) rotate(-90deg);
-}
-
-.sidebar-items .submenu {
-    display: none;
-    padding-left: 20px;
-}
-
-.sidebar-items .down.open+.submenu {
-    display: block;
-} */
+/* Amazon music sub menu */
